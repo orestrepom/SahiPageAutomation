@@ -19,14 +19,14 @@ namespace SahiAuto.Test
         {
             Driver = new ChromeDriver();
             Driver.Url = "http://sahitest.com/demo/training/login.htm";
-           
+
         }
 
-        //[TearDown]
-        //public void AfterEach()
-        //{
-        //    Driver.Quit();
-        //}
+        [TearDown]
+        public void AfterEach()
+        {
+            Driver.Quit();
+        }
 
         [Test]
         public void LoginSuccess()
